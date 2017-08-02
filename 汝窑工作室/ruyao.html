@@ -2,39 +2,219 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jquery自动适应宽度的高大上banner切换效果图特效代码</title> 
+<title>汝窑工作室</title>
+<meta name="keywords" content="策划, 文案, 公文, 设计, UI设计" />
 
+<link rel="icon" type="image/x-icon" href="images/ic_ruyao.png"/>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/fsbanner.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/animation.css" media="screen" />
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.banner.revolution.min.js"></script>
 <script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript" src="js/fsbanner.js"></script>
+<style>
+header{
+	position:relative;
+	width:100%;
+	margin:0 auto;
+    height: auto;
+    position: fixed;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    transition: all ease .3s;
+    z-index: 99;
+}
+}
+header.mini {
+    background: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.logoBox{
+	float:left;
+	margin-left:10%;
+	margin-top:10px;
+	width:180px;
+}
+.logoBox img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+.logoBox h1 {
+    float: left;
+    font-family: 'STXingkai';
+    font-size: 24px;
+    color: #656565;
+    font-weight: normal;
+    margin: 5px 0 5px 0;
+}
+.logoBox h1 span {
+    font-family: 'SimSun';
+	font-size: 18px;
+}
+.logoBox h2 {
+    font-family: 'FuturaStdLightTrRegular';
+    font-size: 14px;
+    color: #8c8c8c;
+	margin-top:5px;
+    font-weight: normal;
+    text-align: right;
+}
 
+header ul#nav{
+	float:right;
+	margin-right:10%;
+}
+header ul li.navitem {
+    padding: 0 20px 10px 20px;
+    width: auto;
+    height: 50px;
+    line-height: 40px;
+    float: left;
+    position: relative;
+    transition: all ease .3s;
+	list-style:none;
+}
+header ul li.navitem a{
+	font-size:16px;
+	color: #8c8c8c;
+}
+header ul li.navitem a.active{
+	color: #03d522;
+}
+header ul li.navitem:hover a {
+    color: #03d522;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 70%;
+}
+.part-title{
+	margin-top:100px;
+	font-size:20px;
+	font-family:"微软雅黑";
+}
+.part-sub-title{
+	font-size:14px;
+	font-family:"微软雅黑";
+	color:#a1a1a1;
+}
+.fsbanner-content{
+	font-family:'STXingkai';
+	position:absolute;
+	font-size:22px;
+	bottom:50px;
+	left:250px;
+	right:100px;
+	text-indent:44px;
+}
+</style>
 </head> 
 
 <body> 
-<div id="wrapper">
-	<div class="fullwidthbanner-container">
-		<div class="fullwidthbanner">
-			<ul>
-				<li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="300">
-					<img src="images/slides/slide3.jpg" alt="" />									
-				</li>
-				<li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300" data-link="#">
-					<img src="images/slides/slide5.jpg" alt="" />
-				</li>
-				<li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-link="#">
-					<img src="images/slides/slide2.jpg" alt="" />
-				</li>
-				<li data-transition="turnoff" data-slotamount="15" data-masterspeed="300">
-					<img src="images/slides/slide1.jpg" alt="" />
-				</li>	
-				<li data-transition="flyin" data-slotamount="15" data-masterspeed="300">
-					<img src="images/slides/slide6.jpg" alt="" />	 
-				</li>					
-			</ul>
+	<header class="mini">
+		<div class="logoBox">
+			<img src="images/ic_ruyao.png" alt="汝窑" border="0"/>
+			<h1>
+				汝窑<span>工作室</span>
+			</h1>
+			<h2>
+				——<i>作品即灵魂</i>
+			</h2>
+		</div>
+		<ul id="nav">
+			<li class="navitem">
+				<a class="active" >
+					Home
+					<strong class="nav_ico"></strong>
+				</a>
+			</li>
+			<li class="navitem">
+				<a>
+					文案
+					<strong class="nav_ico"></strong>
+				</a>
+			</li>
+			<li class="navitem">
+				<a>
+					策划
+					<strong class="nav_ico"></strong>
+				</a>
+			</li>
+			<li class="navitem">
+				<a>
+					设计
+					<strong class="nav_ico"></strong>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+	<div id="wrapper">
+		<div class="fullwidthbanner-container">
+			<div class="fullwidthbanner">
+				<ul>
+					<li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="300">
+						<img src="images/slides/slide3.jpg" alt="" />									
+					</li>
+					<li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300" data-link="https://www.baidu.com">
+						<img src="images/slides/slide5.jpg" alt="" />
+					</li>
+					<li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-link="https://www.baidu.com">
+						<img src="images/slides/slide2.jpg" alt="" />
+					</li>
+					<li data-transition="turnoff" data-slotamount="15" data-masterspeed="300">
+						<img src="images/slides/slide1.jpg" alt="" />
+					</li>
+					<li data-transition="flyin" data-slotamount="15" data-masterspeed="300">
+						<img src="images/slides/slide6.jpg" alt="" />
+					</li>					
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
+	
+	<div class="container">
+		<div style="margin:30px auto;text-align:center">
+			<p class="part-title">文案</p>
+			<p class="part-sub-title">文案文案文案</p>
+		</div>
+	
+		<div class="fsbanner" id="fs">
+			<div style="background-color:#000000">
+				<span class="name">品牌文案</span>
+				<img class="fsbanner-img" src="images/fs/1.png" style="width:400px;" />
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+			<div style="background-color:#2E0063">
+				<span class="name">产品文案</span>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:400px;" />
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+			<div style="background-color:#435676">
+				<span class="name">电商文案</span>
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+			<div style="background-color:#ad4960">
+				<span class="name">媒体文案</span>
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+			<div style="background-color:#ad4960">
+				<span class="name">影视文案</span>
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+			<div style="background-color:#e5ac60">
+				<span class="name">公文</span>
+				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('#fs').fsBanner({'trigger':'mouse'});
+	</script>
 </body> 
 </html>
