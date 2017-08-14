@@ -9,127 +9,73 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/fsbanner.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/animation.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+
+<link rel="stylesheet" href="cd-css/style.css"> 
+<script type="text/javascript"  src="cd-js/modernizr.js"></script>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery.banner.revolution.min.js"></script>
 <script type="text/javascript" src="js/banner.js"></script>
 <script type="text/javascript" src="js/fsbanner.js"></script>
 <style>
-header{
-	position:relative;
-	width:100%;
-	margin:0 auto;
-    height: auto;
-    position: fixed;
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    transition: all ease .3s;
-    z-index: 99;
+#paperwork1{
+	background:url(images/slides/slide1.jpg) no-repeat center;
+	background-size:cover;
 }
+#paperwork2{
+	background:url(images/slides/slide2.jpg) no-repeat center;
+	background-size:cover;
 }
-header.mini {
-    background: #fff;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+#paperwork3{
+	background:url(images/slides/slide3.jpg) no-repeat center;
+	background-size:cover;
 }
-.logoBox{
-	float:left;
-	margin-left:10%;
-	margin-top:10px;
-	width:180px;
+#paperwork4{
+	background:url(images/slides/slide5.jpg) no-repeat center;
+	background-size:cover;
 }
-.logoBox img {
-    width: 50px;
-    height: 50px;
-    float: left;
-    display: block;
-    margin-right: 10px;
+#paperwork5{
+	background:url(images/slides/slide6.jpg) no-repeat center;
+	background-size:cover;
 }
-.logoBox h1 {
-    float: left;
-    font-family: 'STXingkai';
-    font-size: 24px;
-    color: #656565;
-    font-weight: normal;
-    margin: 5px 0 5px 0;
-}
-.logoBox h1 span {
-    font-family: 'SimSun';
-	font-size: 18px;
-}
-.logoBox h2 {
-    font-family: 'FuturaStdLightTrRegular';
-    font-size: 14px;
-    color: #8c8c8c;
-	margin-top:5px;
-    font-weight: normal;
-    text-align: right;
-}
-
-header ul#nav{
-	float:right;
-	margin-right:10%;
-}
-header ul li.navitem {
-    padding: 0 20px 10px 20px;
-    width: auto;
-    height: 50px;
-    line-height: 40px;
-    float: left;
-    position: relative;
-    transition: all ease .3s;
-	list-style:none;
-}
-header ul li.navitem a{
-	font-size:16px;
-	color: #8c8c8c;
-}
-header ul li.navitem a.active{
-	color: #03d522;
-}
-header ul li.navitem:hover a {
-    color: #03d522;
-}
-
-.container {
-  margin: 50px auto;
-  max-width: 70%;
-}
-.part-title{
-	margin-top:100px;
-	font-size:20px;
-	font-family:"微软雅黑";
-}
-.part-sub-title{
-	font-size:14px;
-	font-family:"微软雅黑";
-	color:#a1a1a1;
-}
-.fsbanner-content{
-	font-family:'STXingkai';
-	position:absolute;
-	font-size:22px;
-	bottom:50px;
-	left:250px;
-	right:100px;
-	text-indent:44px;
+#paperwork6{
+	background:url(images/slides/slide2.jpg) no-repeat center;
+	background-size:cover;
 }
 </style>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var top = $(document).scrollTop();  //获取距离页面顶部的距离
+		if( top >= 100 ) { //当距离顶部超过300px时
+			$('header').addClass('mini');
+		} else { //如果距离顶部小于300px
+			$('header').removeClass('mini');
+		} 
+	});
+});
+	
+</script>
 </head> 
 
 <body> 
-	<header class="mini">
-		<div class="logoBox">
-			<img src="images/ic_ruyao.png" alt="汝窑" border="0"/>
-			<h1>
-				汝窑<span>工作室</span>
-			</h1>
-			<h2>
-				——<i>作品即灵魂</i>
-			</h2>
-		</div>
+	<header class="">
+		<a>
+			<div class="logoBox">
+				<img src="images/ic_ruyao.png" alt="汝窑" border="0"/>
+				<h1>
+					汝窑<span>工作室</span>
+				</h1>
+				<h2>
+					——<i>作品即灵魂</i>
+				</h2>
+			</div>
+		</a>
 		<ul id="nav">
 			<li class="navitem">
 				<a class="active" >
-					Home
+					首页
 					<strong class="nav_ico"></strong>
 				</a>
 			</li>
@@ -148,6 +94,12 @@ header ul li.navitem:hover a {
 			<li class="navitem">
 				<a>
 					设计
+					<strong class="nav_ico"></strong>
+				</a>
+			</li>
+			<li class="navitem">
+				<a>
+					联系我们
 					<strong class="nav_ico"></strong>
 				</a>
 			</li>
@@ -179,36 +131,40 @@ header ul li.navitem:hover a {
 	</div>
 	
 	<div class="container">
-		<div style="margin:30px auto;text-align:center">
+		<div style="margin:40px auto;text-align:center">
 			<p class="part-title">文案</p>
-			<p class="part-sub-title">文案文案文案</p>
+			<i><p class="part-sub-title">PAPERWORK</p></i>
 		</div>
 	
 		<div class="fsbanner" id="fs">
-			<div style="background-color:#000000">
+			<div id="paperwork1">
 				<span class="name">品牌文案</span>
-				<img class="fsbanner-img" src="images/fs/1.png" style="width:400px;" />
+				<img class="fsbanner-img" src="images/fs/1.png" style="width:600px;margin-left:200px;margin-top:100px;" />
 				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
-			<div style="background-color:#2E0063">
+			<div id="paperwork2">
 				<span class="name">产品文案</span>
-				<img class="fsbanner-img" src="images/fs/2.png" style="width:400px;" />
-				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:600px;margin-left:200px;margin-top:100px;" />
+				<p class="fsbanner-content" style="color: #363558;">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
-			<div style="background-color:#435676">
+			<div id="paperwork3">
 				<span class="name">电商文案</span>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:600px;margin-left:200px;margin-top:100px;" />
 				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
-			<div style="background-color:#ad4960">
+			<div id="paperwork4">
 				<span class="name">媒体文案</span>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:600px;margin-left:200px;margin-top:100px;" />
 				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
-			<div style="background-color:#ad4960">
+			<div id="paperwork5">
 				<span class="name">影视文案</span>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:600px;margin-left:200px;margin-top:100px;" />
 				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
-			<div style="background-color:#e5ac60">
+			<div id="paperwork6">
 				<span class="name">公文</span>
+				<img class="fsbanner-img" src="images/fs/2.png" style="width:600px;margin-left:200px;margin-top:100px;" />
 				<p class="fsbanner-content">品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案品牌文案</p>
 			</div>
 		</div>
@@ -216,5 +172,136 @@ header ul li.navitem:hover a {
 	<script>
 		$('#fs').fsBanner({'trigger':'mouse'});
 	</script>
+	<div id="part-plan" class="container">
+		<div style="margin:40px auto;text-align:center">
+			<p class="part-title">策划</p>
+			<i><p class="part-sub-title">PLAN</p></i>
+		</div>
+		
+		<main class="cd-main">
+			<ul class="cd-gallery" style="padding:0px;">
+				<li class="cd-item">
+					<a href="item-1.html">
+						<img src="images/slides/slide2.jpg"/>
+						<div class="cd-item-content">
+							<h2>电商策划</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+
+				<li class="cd-item">
+					<a href="item-2.html">
+						<img src="images/slides/slide1.jpg"/>
+						<div class="cd-item-content">
+							<h2>路演策划</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+
+				<li class="cd-item">
+					<a class="dark-text" href="item-3.html">
+						<img src="images/slides/slide3.jpg"/>
+						<div class="cd-item-content">
+							<h2>推广策划</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+
+				<li class="cd-item">
+					<a href="item-4.html">
+						<img src="images/slides/slide6.jpg"/>
+						<div class="cd-item-content">
+							<h2>活动策划</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+			</ul> <!-- .cd-gallery -->
+		</main> <!-- .cd-main -->
+	</div>
+	<div id="part-plan" class="container">
+		<div style="margin:40px auto;text-align:center">
+			<p class="part-title">设计</p>
+			<p class="part-sub-title"><i>DESIGN</i></p>
+		</div>
+		
+		<main class="cd-main">
+			<ul class="cd-gallery" style="padding:0px;">
+				<li class="cd-item">
+					<a href="item-3.html">
+						<img src="images/slides/slide3.jpg"/>
+						<div class="cd-item-content">
+							<h2>网页设计</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+
+				<li class="cd-item">
+					<a href="item-4.html">
+						<img src="images/slides/slide6.jpg"/>
+						<div class="cd-item-content">
+							<h2>UI设计</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+							<b>View More</b>
+						</div>
+					</a>
+				</li>
+			</ul> <!-- .cd-gallery -->
+		</main> <!-- .cd-main -->
+	</div>
+	<div style="background:#ffffff;width:100%;height:10px;box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+	<div>
+	<div style="background:#000000;width:100%;height:240px;position:absolute;color:#fff">
+		<div style="margin:20px auto;text-align:center">
+			<p>联系我们</p>
+		</div>
+		<div class="container" style="position:relative;padding-left:100px;padding-right:200px;height:100px">
+			<div style="margin-left:40px;float:left;width:50%;height:100%">
+				<div style="position:absolute;bottom:0px;">
+				<h5>汝窑工作室</h5>
+				<div style="display:table-row">
+					<p class="ellipsis" style="display:table-cell">地址: 中国·青岛</p>
+					<p class="ellipsis" style="display:table-cell;padding-left:10px">邮编: 266000</p>
+				</div>
+				
+				<div style="display:table-row">
+					<p class="ellipsis" style="display:table-cell">电话: 12345678901</p>
+					<p class="ellipsis" style="display:table-cell;padding-left:10px">e-mail: 123123123@ry.com</p>
+				</div>
+				</div>
+			</div>
+			<div style="margin-left:40px;text-align:center;float:right;width:auto;">
+				<img src="images/weixin.png" style="width:100px;height:100px;margin-top:0px;"/>
+				<p class="ellipsis" style="margin-top:5px;display:block;">微信公众号</p>
+			</div>
+		</div>
+	<div>
+	<div class="cd-folding-bg">
+	</div>
+	<div class="cd-folding-panel">
+		
+		<div class="fold-left"></div> <!-- this is the left fold -->
+		
+		<div class="fold-right"></div> <!-- this is the right fold -->
+		
+		<div class="cd-fold-content">
+			<!-- content will be loaded using javascript -->
+		</div>
+
+		<a class="cd-close" href="#0"></a>
+	</div> <!-- .cd-folding-panel -->
+	
+
+	
+	<script src="cd-js/main.js"></script> <!-- Resource jQuery -->
 </body> 
 </html>

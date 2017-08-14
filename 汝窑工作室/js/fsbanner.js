@@ -51,6 +51,10 @@ var fsBanner = function(container,options) {
 			if (self.options.showName) {
 				var $name = $item.find('.name');
 				if ($name.hasClass('minimized')) $name.hide().removeClass('minimized').fadeIn('fast');
+				var img = $item.find('.fsbanner-img');
+				if(img.hasClass('a-fadeinB')){
+					img.removeClass('a-fadeinB').addClass('a-fadeoutB');
+				}
 			}
 		});
 		this.ilast = null;
@@ -81,9 +85,8 @@ var fsBanner = function(container,options) {
 					if (method) $name.hide()[method]('minimized').fadeIn('fast');
 				}
 				if(i==iexpanded){
+					$item.find('.fsbanner-img').removeClass('a-fadeoutB');
 					$item.find('.fsbanner-img').addClass('a-fadeinB');
-				}else{
-					$item.find('.fsbanner-img').removeClass('a-fadeinB');
 				}
 			});
 			this.ilast = iexpanded;
